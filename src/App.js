@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import AuthProvider from './lib/AuthProvider';
 import AnonRoute from './components/AnonRoute';
@@ -16,6 +17,7 @@ import EditUser from "./pages/EditUser";
 class App extends Component {
   render(){
     return (
+      <Router>
       <AuthProvider>
       <div className="App">
         <Navbar/>
@@ -28,6 +30,7 @@ class App extends Component {
         </Switch>
       </div>
       </AuthProvider>
+      </Router>
     );
   }
  

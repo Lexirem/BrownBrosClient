@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Home(props) {
     return(
         <div>
-         <div>
+         <div className="subNav">
             <ul>
               <li>Desayunos</li>
               <li>Burgers</li>
@@ -18,7 +18,7 @@ function Home(props) {
               <li>Dulce</li>   
             </ul>   
          </div> 
-               
+
         </div>    
     )
 }
