@@ -7,6 +7,17 @@
 }
 .navbar{
   display: flex;
-  flex-direction: space-around;
+  align-content: space-around;
+}
+.subNav{
+  display: flex;
+  flex-direction: row;
+}
+.subNav li{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  text-decoration: none;
+
 }
 
