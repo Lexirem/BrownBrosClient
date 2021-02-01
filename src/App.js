@@ -13,6 +13,8 @@ import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import Profile from "./pages/Profile";
 import EditUser from "./pages/EditUser";
+import Pedido from "./pages/Pedido";
+
 
 class App extends Component {
   render(){
@@ -27,6 +29,7 @@ class App extends Component {
           <Route exact path="/" component={Home}/>
           <PrivateRoute exact path='/profile/:id' component={Profile}/>
           <PrivateRoute exact path='/profile/:id/edit' component={EditUser}/>
+          <PrivateRoute exact path="/pedidos" component={Pedido}/>
         </Switch>
       </div>
       </AuthProvider>

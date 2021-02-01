@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+
+}
 .App {
   text-align: center;
 }
@@ -7,17 +11,31 @@
 }
 .navbar{
   display: flex;
-  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  background-color: orange;
+}
+.navbar-logged{
+  
 }
 .subNav{
+  background-color: brown;
   display: flex;
   flex-direction: row;
-}
-.subNav li{
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
+  align-content: space-between;
+  padding: 40px;
   text-decoration: none;
-
 }
+.subNav p{
+  padding: 10px;
+}
+.subNav p:hover{
+  background-color: darkorange;
+  padding: 90px;
+}
+
+.logos{
+  width: 150px;
+}
+
 

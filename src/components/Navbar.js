@@ -9,7 +9,7 @@ class Navbar extends Component {
             <nav className='navbar'>
             <div>
               <Link to={"/"} className='home-btn'>
-              <img className="logo" src="https://res.cloudinary.com/dh2lo8p1f/image/upload/v1607674460/fotos/kisspng-slime-rancher-puddle-blushing-puddle-5abf99dd683f02.693974441522506205427_thp0a6.png" alt="logo"/>
+              <img className="logo" src='BROWN BROS. sello (1).png' alt="logo"/>
               </Link>
               </div>
               {isLoggedin ? (
@@ -22,6 +22,9 @@ class Navbar extends Component {
                   </button>
                   <button className="navbar-button" onClick={logout}>
                   Logout
+                  </button>
+                  <button>
+                    <img src="" alt="carrito"/>
                   </button>
                 </div>
               ) : (
