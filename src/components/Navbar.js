@@ -9,9 +9,10 @@ class Navbar extends Component {
             <nav className='navbar'>
             <div>
               <Link to={"/"} className='home-btn'>
-              <img className="logo" src='BROWN BROS. sello (1).png' alt="logo"/>
+                <img className="logo" src='BROWN BROS. sello (1).png' alt="logo"/>
               </Link>
-              </div>
+            </div>
+            
               {isLoggedin ? (
                 <div className="navbar-logged">
               
@@ -23,7 +24,7 @@ class Navbar extends Component {
                   <button className="navbar-button" onClick={logout}>
                   Logout
                   </button>
-                  <button>
+                  <button className="navbar-button">
                     <img src="" alt="carrito"/>
                   </button>
                 </div>

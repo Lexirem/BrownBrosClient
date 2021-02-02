@@ -8,9 +8,9 @@ class Auth {
     });
   }
 
-  signup({ email, password }) {
+  signup({ name, surname, direction, postalCode, email, password }) {
     return this.auth
-      .post("/auth/signup", { email, password })
+      .post("/auth/signup", { name, surname, direction, postalCode, email, password })
       .then(({ data }) => data);
   }
 
@@ -32,8 +32,8 @@ class Auth {
     return this.auth.get(`/profile/${id}`).then(({data}) => data);
   }
 
-  editUser(){
-    return this.auth.get(`/profile/:id/edit`).then(({data}) => data);
+  editUser(id){
+    return this.auth.get(`/profile/${id}/edit`).then(({data}) => data);
   }
   
 }

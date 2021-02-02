@@ -8,6 +8,7 @@ class Signup extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     const { name, surname, email, password, direction, postalCode } = this.state;
+    console.log(this.state, "This stateeee")
     this.props.signup({ name, surname, email, password, direction, postalCode });
   };
 
@@ -36,7 +37,7 @@ class Signup extends Component {
           <input type="password" name="password" value={password} onChange={this.handleChange} />
           <br/>
           <label><b>Direccion: </b></label>
-          <input type="text" name="diretion" value={direction} onChange={this.handleChange} />
+          <input type="text" name="direction" value={direction} onChange={this.handleChange} />
           <br/>
           <label><b>Codigo Postal: </b></label>
           <input type="text" name="postalCode" value={postalCode} onChange={this.handleChange} />

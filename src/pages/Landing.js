@@ -15,8 +15,8 @@ function Home(props) {
           <p><Link to="/fritos" >Fritos</Link></p>
           <p><Link to="/bebidas" >Bebidas</Link></p>
           <p><Link to="/dulce" >Dulce</Link></p>      
-          <div>
-            <button><Link to="/pedidos">Hacer Pedido</Link></button>
+          <div >
+            <button className="button-pedido"><Link to="/pedidos">Hacer Pedido</Link></button>
           </div>
         </div>
         
