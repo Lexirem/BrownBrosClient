@@ -14,7 +14,7 @@ import SignUp from "./pages/Signup";
 import Profile from "./pages/Profile";
 import EditUser from "./pages/EditUser";
 import Pedido from "./pages/Pedido";
-
+import Footer from "./components/Footer";
 
 class App extends Component {
   render(){
@@ -31,6 +31,7 @@ class App extends Component {
           <PrivateRoute exact path='/profile/:id/edit' component={EditUser}/>
           <PrivateRoute exact path="/pedidos" component={Pedido}/>
         </Switch>
+        <Footer/>
       </div>
       </AuthProvider>
       </Router>
