@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { withAuth } from "../lib/AuthProvider";
 
 class Pedido extends Component {
+  
     render() {
         return (
             <div>
@@ -41,10 +44,10 @@ class Pedido extends Component {
                   <img className="logos" src="logo bebidas.png" alt="logo bebidas"/> 
                   <hr></hr>
                 </div>
-                <button>Confirmar Pedido</button>
+                <button><Link to={"/carrito"}>Confirmar Pedido</Link></button>
             </div>
         )
     }
 }
 
-export default Pedido;
+export default withAuth(Pedido);
