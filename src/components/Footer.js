@@ -9,17 +9,19 @@ import { Link } from "react-router-dom";
                     <img className="logo" src="brown.png" alt="logo brown bros" />
                     <p>Tel.: </p>
                     <p>Email:</p>
-                    <div className="navbar-button">
-                        <Link to={""}><img src="" alt=""/></Link>
-                        <Link to={""}><img src="" alt=""/></Link>
-                        <Link to={""}><img src="" alt=""/></Link>
-                    </div>
-                </div>
-                <div className="subNav">
-                    <p><Link to={""}>aaaaaaa</Link></p>
-                    <p><Link to={""}>aaaaaaa</Link></p>
-                    <p><Link to={""}>aaaaaaa</Link></p>
-                    <p><Link to={""}>aaaaaaa</Link></p>
+                    <a href="https://es-es.facebook.com/" title="Facebook" target="_blank">
+                        <img src="facebook.png" alt="Enlace a Facebook" />
+                    </a>
+
+                    <a href="https://www.instagram.com/?hl=es" title="Instagram" target="_blank">
+                        <img src="Instagram.png" alt="Enlace a Instagram" />
+                    </a>
+
+                    <a href="https://twitter.com/?lang=es" title="Twitter"
+                    target="_blank">
+                        <img src="twitter.png" alt="Enlace a twitter" />
+                    </a>
+
                 </div>
                 
             </div>
