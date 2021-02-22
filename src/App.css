@@ -16,6 +16,7 @@ a{
   text-align: center;
 }
 
+/* NAVBAR */
 .logo{
   width: 100px;
 }
@@ -54,6 +55,13 @@ a{
   height: 100%;
 }
 
+/* LANDING PAGE */
+h1{
+  text-align: center;
+  margin: 20px;
+}
+
+/* PAGINA PEDIDO */
 .logos{
   width: 150px;
 }
@@ -68,6 +76,7 @@ a{
   padding: 15px;
 }
 
+/* PERFIL USUARIO */
 .profile{
   margin: 83px;
   border: 2px solid orange;
@@ -78,14 +87,19 @@ a{
   background-color: orange;
 }
 
+/* FOOTER */
 #footer{
-  position: static;
+  position: absolute;
   margin-top: 20px;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 10rem;
+  height: 40px;
 }
+
 .redes{
   width: 50px;
 }
+
+
+/* RESPONSIVE */

@@ -31,8 +31,9 @@ class App extends Component {
           <PrivateRoute exact path='/profile/:id/edit' component={EditUser}/>
           <PrivateRoute exact path="/pedidos" component={Pedido}/>
         </Switch>
-        <Footer/>
+        
       </div>
+      <Footer/>
       </AuthProvider>
       </Router>
     );

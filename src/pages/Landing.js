@@ -19,7 +19,9 @@ function Home(props) {
             <button className="button-pedido"><Link to="/pedidos">Hacer Pedido</Link></button>
           </div>
         </div>
-        
+        <div>
+          <h1>Bienvenidos a Brown Bros.</h1>
+        </div>
 
 
       </div>    
