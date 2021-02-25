@@ -9,7 +9,7 @@ class Navbar extends Component {
             <nav className='navbar'>
             <div>
               <Link to={"/"} className='home-btn'>
-                <img className="logo" src='BROWN BROS. sello (1).png' alt="logo"/>
+                <img className="logo" src="./img/BROWN BROS. sello (1).png" alt="logo"/>
               </Link>
             </div>
             
