@@ -9,13 +9,15 @@ const withAuth = (WrappedComponent) => {
       return (
         <Consumer>
         { 
-          ({login, signup, user, logout, isLoggedin}) => {
+          ({login, signup, user, logout, isLoggedin, cart, userCart}) => {
             return (
               <WrappedComponent 
                 login={login} 
                 signup={signup} 
                 user={user}
                 logout={logout}
+                cart={cart}
+                userCart={userCart}
                 isLoggedin={isLoggedin}
                 {...this.props} />
             );
@@ -28,7 +30,7 @@ const withAuth = (WrappedComponent) => {
 
 // Provider
 class AuthProvider extends React.Component {
-  state = { isLoggedin: false, user: null, isLoading: true };
+  state = { isLoggedin: false, user: null, isLoading: true, cart: [] };
 
   componentDidMount() {
     auth.me()
@@ -57,16 +59,25 @@ class AuthProvider extends React.Component {
       .then(() => this.setState({ isLoggedin: false, user: null }))
       .catch((err) => console.log(err));
   };
-	
+
+	userCart = async () => {
+    try {
+      const userCart = await auth.cart();
+      this.setState({ cart: userCart.products });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   render() {
-    const { isLoading, isLoggedin, user } = this.state;
-    const { login, logout, signup } = this;
+    const { isLoading, isLoggedin, user, cart } = this.state;
+    const { login, logout, signup, userCart } = this;
     
     return (
       isLoading ? 
       <div>Loading</div> 
       :
-      (<Provider value={{ isLoggedin, user, login, logout, signup}} >
+      (<Provider value={{ isLoggedin, user, cart, login, logout, signup, userCart}} >
          {this.props.children}
       </Provider>)
     )	

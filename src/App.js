@@ -8,12 +8,14 @@ import AnonRoute from './components/AnonRoute';
 import PrivateRoute from './components/PrivateRoute';
 
 import Navbar from "./components/Navbar";
+import SubBar from "./components/SubBar";
 import Home from "./pages/Landing";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import Profile from "./pages/Profile";
 import EditUser from "./pages/EditUser";
 import Pedido from "./pages/Pedido";
+import Carrito from "./pages/Carrito";
 import Footer from "./components/Footer";
 
 class App extends Component {
@@ -23,6 +25,7 @@ class App extends Component {
       <AuthProvider>
       <div className="App">
         <Navbar/>
+        <SubBar/>
         <Switch> 
           <AnonRoute path="/login" component={Login}/>
           <AnonRoute path="/signup" component={SignUp}/>
@@ -30,6 +33,7 @@ class App extends Component {
           <PrivateRoute exact path='/profile/:id' component={Profile}/>
           <PrivateRoute exact path='/profile/:id/edit' component={EditUser}/>
           <PrivateRoute exact path="/pedidos" component={Pedido}/>
+          <PrivateRoute exact path="/carrito" component={Carrito}/>
         </Switch>
         
       </div>

@@ -16,6 +16,11 @@ class Pedido extends Component {
   //   this.getList()
   // };
 
+  // const addItemToCart = async (id) => {
+  //   await services.addproduct(id);
+  //   await props.userCart();
+  // };
+
     render() {
         return (
             <div>
@@ -316,7 +321,7 @@ class Pedido extends Component {
                 <button><Link to={"/carrito"}>Confirmar Pedido</Link></button>
             </div>
         )
-    }
-}
+    };
+};
 
 export default withAuth(Pedido);
